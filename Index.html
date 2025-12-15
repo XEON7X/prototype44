@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURELIA | Premium Jewelry</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="header">
+        <nav class="navbar">
+            <div class="logo">AURELIA</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#featured">Shop</a></li>
+                <li><a href="#about">Heritage</a></li>
+            </ul>
+            <div class="nav-icons">
+                <i class="fa-regular fa-heart" id="wishlist-btn"><span class="badge" id="wishlist-count">0</span></i>
+                <i class="fa-solid fa-bag-shopping" id="cart-btn"><span class="badge" id="cart-count">0</span></i>
+                <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1500">
+            <h3>Timeless Elegance</h3>
+            <h1>Defining Luxury<br>Since 1924</h1>
+            <p>Handcrafted with precision, designed for eternity.</p>
+            <a href="#featured" class="btn-primary">Explore Collection</a>
+        </div>
+    </section>
+
+    <section id="collections" class="section-padding">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Our Collections</h2>
+            <div class="divider"></div>
+        </div>
+        
+        <div class="swiper mySwiper" data-aos="fade-up" data-aos-delay="200">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide collection-card">
+                    <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&q=80&w=600" alt="Rings">
+                    <h3>Engagement Rings</h3>
+                </div>
+                <div class="swiper-slide collection-card">
+                    <img src="https://images.unsplash.com/photo-1599643478518-17488fbbcd75?auto=format&fit=crop&q=80&w=600" alt="Necklaces">
+                    <h3>Royal Necklaces</h3>
+                </div>
+                <div class="swiper-slide collection-card">
+                    <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&q=80&w=600" alt="Earrings">
+                    <h3>Diamond Earrings</h3>
+                </div>
+                <div class="swiper-slide collection-card">
+                    <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&q=80&w=600" alt="Bracelets">
+                    <h3>Gold Bracelets</h3>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <section id="featured" class="section-padding bg-light">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Exquisite Pieces</h2>
+            <div class="divider"></div>
+            <p>Curated selection of our finest craftsmanship.</p>
+        </div>
+        
+        <div class="product-grid" id="product-container">
+            </div>
+    </section>
+
+    <section id="about" class="section-padding">
+        <div class="about-container">
+            <div class="about-img" data-aos="fade-right">
+                <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&q=80&w=800" alt="Craftsmanship">
+            </div>
+            <div class="about-text" data-aos="fade-left">
+                <h2>The Art of Jewelry</h2>
+                <p>Every piece at Aurelia tells a story. Sourced ethically and crafted by master artisans, our jewelry represents the pinnacle of luxury and sustainability.</p>
+                <ul class="features-list">
+                    <li><i class="fa-solid fa-certificate"></i> GIA Certified Diamonds</li>
+                    <li><i class="fa-solid fa-gem"></i> 24k Pure Gold</li>
+                    <li><i class="fa-solid fa-hammer"></i> Handcrafted Perfection</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>AURELIA</h3>
+                <p>Luxury redefined.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Customer Care</h4>
+                <a href="#">Contact Us</a>
+                <a href="#">Shipping & Returns</a>
+                <a href="#">Warranty</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Aurelia Jewelry. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Bag</h3>
+            <span class="close-cart" id="close-cart">&times;</span>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <p class="empty-msg">Your cart is empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="total-price">
+                <span>Total:</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <button class="btn-checkout">Checkout</button>
+        </div>
+    </div>
+
+    <div class="modal" id="product-modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-modal">&times;</span>
+            <div class="modal-body" id="modal-body">
+                </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
